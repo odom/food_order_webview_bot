@@ -1,0 +1,52 @@
+extends ../layout
+
+block content
+    .container
+        .row
+            .col-xs-8.col-xs-offset-4
+                h4 Delivery Form
+        form.registation-form(method='POST' action='user/register')
+            .row
+                label.col-xs-4.text-right(for='inputFirstname') First name:
+                .col-xs-8
+                    input#inputFirstname.form-control(type='text' name='fname' value='' placeholder='First Name')
+            .row
+                label.col-xs-4.text-right(for='inputLastname') Last name:
+                .col-xs-8
+                    input#inputLastname.form-control(type='text' name='lname' value='' placeholder='Last name')
+            .row
+                label.col-xs-4.text-right(for='streetInput') Street:
+                .col-xs-8
+                    input#streetInput.form-control(type='text' name='street' value='' placeholder='Street')
+            .row
+                label.col-xs-4.text-right(for='inputNumber') Number:
+                .col-xs-8
+                    input#inputNumber.form-control(type='text' name='number' value='' placeholder='Number')
+            .row
+                label.col-xs-4.text-right(for='zipInput') Zip:
+                .col-xs-8
+                    input#zipInput.form-control(type='text' name='zip' value='' placeholder='Zip')
+            .row
+                label.col-xs-4.text-right(for='inputCity') City:
+                .col-xs-8
+                    input#inputCity.form-control(type='text' name='city' value='' placeholder='City')
+            .row
+                label.col-xs-4.text-right(for='inputFloor') Floor:
+                .col-xs-8
+                    input#inputFloor.form-control(type='text' name='floor' value='' placeholder='Floor')
+            .row
+                label.col-xs-4.text-right(for='inputCity') Name on Door Bel:
+                .col-xs-8
+                    input#inputNameonDoorBel.form-control(type='text' name='nameDoorBel' value='' placeholder='Name on Door Bel')
+            .row
+                label.col-xs-4.text-right(for='inputCity') Comment:
+                .col-xs-8
+                    input#inputComment.form-control(type='text' name='comment' value='' placeholder='Comment')
+
+                input#psidName.form-control(type='hidden' name='psid' value='1885481668135688' placeholder='Comment')
+                input#appId.form-control(type='hidden'  value={appId}.appId placeholder='Comment')
+            .row
+                .col-xs-8.col-xs-offset-4
+                    button.btn.btn-default(type='submit') Submit
+block script
+    script(src='/js/getUser.js')
